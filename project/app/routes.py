@@ -29,3 +29,22 @@ def add_team():
             return redirect(url_for('main.teams'))
 
     return render_template('add_team.html')
+
+@main_bp.route('/edit_team/<int:team_id>', methods=['GET', 'POST'])
+def edit_team(team_id):
+    team = Team.query.get_or_404(team_id)
+    if request.method == 'POST':
+        team.name = request.form['name']
+        team.city = request.form['city']
+        db.session.commit()
+        flash("Team updated successfully!", "success")
+        return redirect(url_for('main.teams'))
+    return render_template('edit_team.html', team=team)
+
+@main_bp.route('/delete_team/<int:team_id>', methods=['POST'])
+def delete_team(team_id):
+    team = Team.query.get_or_404(team_id)
+    db.session.delete(team)
+    db.session.commit()
+    flash("Team deleted successfully!", "success")
+    return redirect(url_for('main.teams'))

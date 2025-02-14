@@ -20,3 +20,6 @@
     </tbody>
 </table>
 {% endblock %}
+<form method="POST" action="{{ url_for('main.delete_team', team_id=team.id) }}" style="display: inline;">
+    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+</form>
