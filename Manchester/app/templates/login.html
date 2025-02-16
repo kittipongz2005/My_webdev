@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manchester United Login</title>
+    <title>Manchester United Login & Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -15,7 +15,6 @@
             min-height: 100vh;
             margin: 0;
             background-color: #f8f9fa;
-            /* พื้นหลังสีขาวนวล */
         }
 
         .card {
@@ -26,7 +25,6 @@
 
         .card-header {
             background-color: #DA291C;
-            /* สีแดงของ Manchester United */
             color: #FFF;
             text-align: center;
             border-radius: 15px 15px 0 0;
@@ -37,10 +35,6 @@
             font-weight: bold;
             text-transform: uppercase;
             margin: 0;
-        }
-
-        .card-body {
-            padding: 30px;
         }
 
         .btn-primary {
@@ -59,10 +53,15 @@
             border-radius: 5px;
         }
 
-        .text-muted {
+        .toggle-link {
             text-align: center;
-            display: block;
             margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .logo {
+            width: 80px;
+            margin-bottom: 10px;
         }
 
         footer {
@@ -72,9 +71,10 @@
             color: #6c757d;
         }
 
-        .logo {
-            width: 80px;
-            margin-bottom: 10px;
+        .error-message {
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -87,32 +87,63 @@
                     <div class="card-header">
                         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"
                             alt="Manchester United Logo" class="logo">
-                        <h3>Login</h3>
+                        <h3 id="form-title">Login</h3>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ url_for('main.login') }}">
+                        <!-- Login Form -->
+                        <form id="login-form" method="POST" action="{{ url_for('main.login') }}"
+                            onsubmit="return validateLoginForm()">
                             {{ form.hidden_tag() }}
                             <div class="form-group mb-3">
                                 <label for="username" class="form-label">Username</label>
-                                {{ form.username(class="form-control", placeholder="Enter your username") }}
+                                <input type="text" id="login-username" name="username" class="form-control"
+                                    placeholder="Enter your username" required>
+                                <div id="login-username-error" class="error-message"></div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="password" class="form-label">Password</label>
-                                {{ form.password(class="form-control", placeholder="Enter your password") }}
+                                <input type="password" id="login-password" name="password" class="form-control"
+                                    placeholder="Enter your password" required>
+                                <div id="login-password-error" class="error-message"></div>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Login</button>
                         </form>
-                        {% with messages = get_flashed_messages(with_categories=true) %}
-                        {% if messages %}
-                        <div class="mt-3">
-                            {% for category, message in messages %}
-                            <div class="alert alert-{{ category }}">{{ message }}</div>
-                            {% endfor %}
+
+                        <!-- Register Form -->
+                        <form id="register-form" method="POST" action="{{ url_for('main.register') }}"
+                            style="display: none;" onsubmit="return validateRegisterForm()">
+                            {{ form.hidden_tag() }}
+                            <div class="form-group mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="register-username" name="username" class="form-control"
+                                    placeholder="Choose a username" required>
+                                <div id="register-username-error" class="error-message"></div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="register-email" name="email" class="form-control"
+                                    placeholder="Enter your email" required>
+                                <div id="register-email-error" class="error-message"></div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="register-password" name="password" class="form-control"
+                                    placeholder="Choose a password" required>
+                                <div id="register-password-error" class="error-message"></div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="confirm-password" class="form-label">Confirm Password</label>
+                                <input type="password" id="register-confirm-password" name="confirm_password"
+                                    class="form-control" placeholder="Re-enter your password" required>
+                                <div id="register-confirm-password-error" class="error-message"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Register</button>
+                        </form>
+
+                        <div class="toggle-link">
+                            <small id="toggle-text">Don't have an account? <a href="#" class="text-primary"
+                                    onclick="toggleForm()">Register</a></small>
                         </div>
-                        {% endif %}
-                        {% endwith %}
-                        <small class="text-muted">Forgot your password? <a href="#" class="text-primary">Click
-                                here</a></small>
                     </div>
                 </div>
             </div>
@@ -121,6 +152,100 @@
     <footer>
         &copy; 2025 <strong>Manchester United Fan Page</strong>
     </footer>
+    <script>
+        function toggleForm() {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const formTitle = document.getElementById('form-title');
+            const toggleText = document.getElementById('toggle-text');
+
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+                formTitle.textContent = 'Login';
+                toggleText.innerHTML = "Don't have an account? <a href='#' class='text-primary' onclick='toggleForm()'>Register</a>";
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+                formTitle.textContent = 'Register';
+                toggleText.innerHTML = "Already have an account? <a href='#' class='text-primary' onclick='toggleForm()'>Login</a>";
+            }
+        }
+
+        function validateLoginForm() {
+            const username = document.getElementById('login-username').value.trim();
+            const password = document.getElementById('login-password').value.trim();
+            let isValid = true;
+
+            if (username === '') {
+                document.getElementById('login-username-error').textContent = 'Username is required';
+                isValid = false;
+            } else {
+                document.getElementById('login-username-error').textContent = '';
+            }
+
+            if (password === '') {
+                document.getElementById('login-password-error').textContent = 'Password is required';
+                isValid = false;
+            } else {
+                document.getElementById('login-password-error').textContent = '';
+            }
+
+            return isValid;
+        }
+
+        function validateRegisterForm() {
+            const username = document.getElementById('register-username').value.trim();
+            const email = document.getElementById('register-email').value.trim();
+            const password = document.getElementById('register-password').value.trim();
+            const confirmPassword = document.getElementById('register-confirm-password').value.trim();
+            let isValid = true;
+
+            if (username === '') {
+                document.getElementById('register-username-error').textContent = 'Username is required';
+                isValid = false;
+            } else {
+                document.getElementById('register-username-error').textContent = '';
+            }
+
+            if (email === '') {
+                document.getElementById('register-email-error').textContent = 'Email is required';
+                isValid = false;
+            } else if (!validateEmail(email)) {
+                document.getElementById('register-email-error').textContent = 'Invalid email format';
+                isValid = false;
+            } else {
+                document.getElementById('register-email-error').textContent = '';
+            }
+
+            if (password === '') {
+                document.getElementById('register-password-error').textContent = 'Password is required';
+                isValid = false;
+            } else if (password.length < 6) {
+                document.getElementById('register-password-error').textContent = 'Password must be at least 6 characters';
+                isValid = false;
+            } else {
+                document.getElementById('register-password-error').textContent = '';
+            }
+
+            if (confirmPassword === '') {
+                document.getElementById('register-confirm-password-error').textContent = 'Confirm Password is required';
+                isValid = false;
+            } else if (password !== confirmPassword) {
+                document.getElementById('register-confirm-password-error').textContent = 'Passwords do not match';
+                isValid = false;
+            } else {
+                document.getElementById('register-confirm-password-error').textContent = '';
+            }
+
+            return isValid;
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

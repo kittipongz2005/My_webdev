@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, redirect, url_for, flash
-from .forms import LoginForm  # เปลี่ยนการนำเข้าแบบสัมพัทธ์เป็นแบบสัมบูรณ์
+from app.forms import LoginForm, RegistrationForm  # เปลี่ยนการนำเข้าแบบสัมพัทธ์เป็นแบบสัมบูรณ์
 
 main = Blueprint('main', __name__)
 
@@ -19,3 +19,12 @@ def login():
         else:
             flash('Invalid username or password', 'danger')
     return render_template('login.html', form=form)
+
+@main.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        # Handle registration logic here
+        flash('Registration successful!', 'success')
+        return redirect(url_for('main.login'))
+    return render_template('register.html', form=form)
