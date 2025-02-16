@@ -4,74 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Manchester United</title>
+    <title>Manchester United Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #DA291C, #B22222);
-            /* สีแดงไล่เฉด */
-            color: #FFF;
-            height: 100vh;
+            font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+            /* พื้นหลังสีขาวนวล */
         }
 
         .card {
-            border: none;
+            border: 1px solid #DA291C;
             border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .card-header {
-            background-color: #FBE122;
-            color: #000;
+            background-color: #DA291C;
+            /* สีแดงของ Manchester United */
+            color: #FFF;
             text-align: center;
-            padding: 15px;
-            font-size: 1.5rem;
+            border-radius: 15px 15px 0 0;
+            padding: 20px;
+        }
+
+        .card-header h3 {
             font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
         }
 
         .card-body {
-            background-color: #FFF;
-            color: #000;
             padding: 30px;
         }
 
         .btn-primary {
             background-color: #DA291C;
             border: none;
-            transition: all 0.3s;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
-            background-color: #FBE122;
-            color: #000;
+            background-color: #B22222;
         }
 
-        .alert {
-            margin-top: 15px;
+        .form-control {
             border-radius: 5px;
         }
 
-        .form-group label {
-            font-weight: bold;
-        }
-
         .text-muted {
-            font-size: 0.9rem;
-            color: #6c757d !important;
+            text-align: center;
+            display: block;
+            margin-top: 15px;
         }
 
         footer {
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
+            margin-top: 20px;
             text-align: center;
-            color: #FFF;
             font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .logo {
+            width: 80px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -79,27 +82,25 @@
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/800px-Manchester_United_FC_crest.svg.png"
-                                alt="Manchester United Logo" width="40" class="me-2">
-                            Login
-                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"
+                            alt="Manchester United Logo" class="logo">
+                        <h3>Login</h3>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ url_for('main.login') }}">
                             {{ form.hidden_tag() }}
                             <div class="form-group mb-3">
-                                <label for="username">Username</label>
+                                <label for="username" class="form-label">Username</label>
                                 {{ form.username(class="form-control", placeholder="Enter your username") }}
                             </div>
                             <div class="form-group mb-4">
-                                <label for="password">Password</label>
+                                <label for="password" class="form-label">Password</label>
                                 {{ form.password(class="form-control", placeholder="Enter your password") }}
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block w-100">Login</button>
+                            <button type="submit" class="btn btn-primary w-100">Login</button>
                         </form>
                         {% with messages = get_flashed_messages(with_categories=true) %}
                         {% if messages %}
@@ -110,15 +111,15 @@
                         </div>
                         {% endif %}
                         {% endwith %}
+                        <small class="text-muted">Forgot your password? <a href="#" class="text-primary">Click
+                                here</a></small>
                     </div>
                 </div>
-                <p class="text-center text-muted mt-3">Forgot your password? <a href="#" class="text-warning">Reset
-                        it</a></p>
             </div>
         </div>
     </div>
     <footer>
-        &copy; 2025 Manchester United Fan Club
+        &copy; 2025 <strong>Manchester United Fan Page</strong>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
