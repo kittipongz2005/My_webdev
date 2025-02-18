@@ -87,6 +87,8 @@ def logout():
     flash('You have been logged out.', 'info')
     return redirect(url_for('login'))
 
+
+
 if __name__ == '__main__':
     print("Starting Flask server...")
     with app.app_context():

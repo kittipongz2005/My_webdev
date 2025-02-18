@@ -11,9 +11,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #b71c1c; /* สีแดงลิเวอร์พูล */
+    background-color: #b71c1c;
+    /* สีแดงลิเวอร์พูล */
     padding: 10px 20px;
     font-family: 'Roboto', sans-serif;
+    position: fixed;
+    top: 0;
+    width: 99%;
+    z-index: 1000;
 }
 
 .nav-left {
@@ -22,7 +27,8 @@ body {
 }
 
 .logo {
-    height: 40px; /* ปรับขนาดโลโก้ */
+    height: 40px;
+    /* ปรับขนาดโลโก้ */
     margin-right: 10px;
 }
 
@@ -38,13 +44,16 @@ body {
     margin-left: 20px;
     font-size: 16px;
     font-weight: 500;
-    transition: color 0.3s ease; /* ทำให้สีเปลี่ยนอย่างนุ่มนวล */
+    transition: color 0.3s ease;
+    /* ทำให้สีเปลี่ยนอย่างนุ่มนวล */
 
 }
 
 .nav-right a:hover {
-    color: #bebebe; /* เปลี่ยนเป็นสีเทาเมื่อเอาเมาส์ไปชี้ */
-    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    color: #bebebe;
+    /* เปลี่ยนเป็นสีเทาเมื่อเอาเมาส์ไปชี้ */
+    text-decoration: none;
+    /* ไม่มีขีดเส้นใต้ */
 }
 
 /* Form Styling */
@@ -96,4 +105,212 @@ h2 {
 
 .btn-danger:hover {
     background-color: #c9302c;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+    color: #DA291C;
+    /* Manchester United Red */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    color: #333;
+    font-size: 1.2em;
+}
+
+.club-logo {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Cards Section */
+.dashboard-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dashboard-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+}
+
+.dashboard-card h3 {
+    color: #DA291C;
+    /* Manchester United Red */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #DA291C;
+    /* Manchester United Red */
+}
+
+.btn-primary:hover {
+    background-color: #A51C12;
+    /* Darker Red */
+}
+
+.btn-danger {
+    background-color: #DA291C;
+}
+
+.btn-danger:hover {
+    background-color: #ce4e44;
+}
+
+/* Footer */
+.dashboard-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #DA291C;
+    /* Manchester United Red */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 15px;
+    color: #DA291C;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #DA291C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #A51C12;
+    /* Darker Red */
+}
+
+.register-link {
+    margin-top: 10px;
+    color: #333;
+}
+
+.register-link a {
+    color: #DA291C;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 20px;
+    color: #777;
+    font-size: 14px;
 }
