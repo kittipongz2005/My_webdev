@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-{% block content %}
-<h1>Players</h1>
-<ul>
-    {% for player in players %}
-    <li>{{ player.name }} - {{ player.position }} - Goals: {{ player.goals }}</li>
-    {% endfor %}
-</ul>
-{% endblock %}

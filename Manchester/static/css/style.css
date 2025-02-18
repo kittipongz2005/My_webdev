@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b71c1c; /* สีแดงลิเวอร์พูล */
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* ปรับขนาดโลโก้ */
+    margin-right: 10px;
+}
+
+.club-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease; /* ทำให้สีเปลี่ยนอย่างนุ่มนวล */
+
+}
+
+.nav-right a:hover {
+    color: #bebebe; /* เปลี่ยนเป็นสีเทาเมื่อเอาเมาส์ไปชี้ */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+}
+
+/* Form Styling */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
