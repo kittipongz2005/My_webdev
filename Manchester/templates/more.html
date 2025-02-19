@@ -20,6 +20,7 @@
             color: white;
             padding: 1rem 0;
             text-align: center;
+            position: relative;
         }
 
         nav {
@@ -50,6 +51,24 @@
             color: #ffcccb;
         }
 
+        .back-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 15px;
+            background-color: #ffcccb;
+            color: #d60017;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background-color: #ff9999;
+        }
+
         .content {
             padding: 20px;
             max-width: 800px;
@@ -57,16 +76,6 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .content img {
-            max-width: 100%;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .content img:hover {
-            transform: scale(1.05);
         }
 
         footer {
@@ -102,9 +111,9 @@
 
 <body>
     <header>
+        <a href="\dashboard" class="back-btn">Back</a>
         <h1>ประวัติแมนเชสเตอร์ยูไนเต็ด</h1>
     </header>
-
     <nav>
         <ul>
             <li><a href="\history">Frist</a></li>

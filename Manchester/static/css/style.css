@@ -314,3 +314,22 @@ footer {
     color: #777;
     font-size: 14px;
 }
+
+/* ปุ่มกลับไปที่ Dashboard */
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px 20px;
+    background-color: #ffcccb;
+    color: #d60017;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background-color: #ff9999;
+}

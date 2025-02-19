@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ช่วงแรก - ประวัติแมนเชสเตอร์ยูไนเต็ด</title>
+    <title>ประวัติแมนเชสเตอร์ยูไนเต็ด</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,6 +20,7 @@
             color: white;
             padding: 1rem 0;
             text-align: center;
+            position: relative;
         }
 
         nav {
@@ -50,6 +51,24 @@
             color: #ffcccb;
         }
 
+        .back-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 15px;
+            background-color: #ffcccb;
+            color: #d60017;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background-color: #ff9999;
+        }
+
         .content {
             padding: 20px;
             max-width: 800px;
@@ -76,12 +95,24 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>ช่วงแรก (1878-1945)</h1>
+        <a href="\dashboard" class="back-btn">Back</a>
+        <h1>ประวัติแมนเชสเตอร์ยูไนเต็ด</h1>
     </header>
 
     <nav>
