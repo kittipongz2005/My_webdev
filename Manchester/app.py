@@ -93,6 +93,9 @@ def history():
 def players():
     return render_template('players.html', user=current_user)
 
+@app.route('/nextmatch')
+def nextmatch():
+    return render_template('nextmatch.html', user=current_user)
 
 
 if __name__ == '__main__':
