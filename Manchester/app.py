@@ -109,6 +109,9 @@ def change():
 def pressent():
     return render_template('present.html', user=current_user)
 
+@app.route('/more')
+def more():
+    return render_template('more.html', user=current_user)
 
 
 if __name__ == '__main__':
