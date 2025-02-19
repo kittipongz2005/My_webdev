@@ -105,6 +105,12 @@ def trophy():
 def change():
     return render_template('change.html', user=current_user)
 
+@app.route('/present')
+def pressent():
+    return render_template('present.html', user=current_user)
+
+
+
 if __name__ == '__main__':
     print("Starting Flask server...")
     with app.app_context():
