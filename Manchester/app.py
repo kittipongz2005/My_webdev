@@ -66,7 +66,7 @@ def login():
 
         if user and check_password_hash(user.password, password):
             login_user(user)
-            flash('Login successful!', 'success')
+            
             return redirect(url_for('dashboard'))
         
         flash('Invalid username or password!', 'danger')
@@ -84,7 +84,6 @@ def dashboard():
 @login_required
 def logout():
     logout_user()
-    flash('You have been logged out.', 'info')
     return redirect(url_for('login'))
 
 

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Manchester United{% endblock %}</title>
+    <title>{% block title %}Manchester United Fanpage
+        {% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
@@ -13,14 +14,7 @@
     <nav class="navbar">
         <div class="nav-left">
             <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Manchester United Logo" class="logo">
-            <span class="club-name">Manchester United</span>
-        </div>
-        <div class="nav-right">
-            <a href="#">Competition</a>
-            <a href="#">Player</a>
-            <a href="#">Trophy</a>
-            <a href="{{ url_for('login') }}">Login</a>
-            <a href="{{ url_for('register') }}">Register</a>
+            <span class="club-name">Manchester United Fanpage </span>
         </div>
     </nav>
 
