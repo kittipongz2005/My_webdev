@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Login - Liverpool FC{% endblock %}
+{% block title %}Login - Manchester United{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -14,16 +14,18 @@
     {% endif %}
     {% endwith %}
 
-    <div class="card-body">
-        <form method="POST" class="form-container">
-            <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="Username" required>
-            </div>
-            <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Password" required>
-            </div>
-            <button type="submit" class="btn btn-danger">Login</button>
-        </form>
+    <div class="card red-border">
+        <div class="card-body">
+            <form method="POST" class="form-container">
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-danger">Login</button>
+            </form>
+        </div>
     </div>
 
     <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
