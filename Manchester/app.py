@@ -101,6 +101,9 @@ def nextmatch():
 def trophy():
     return render_template('trophy.html', user=current_user)
 
+@app.route('/change')
+def change():
+    return render_template('change.html', user=current_user)
 
 if __name__ == '__main__':
     print("Starting Flask server...")
