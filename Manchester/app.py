@@ -89,6 +89,10 @@ def logout():
 def history():
     return render_template('history.html', user=current_user)
 
+@app.route('/players')
+def players():
+    return render_template('players.html', user=current_user)
+
 
 
 if __name__ == '__main__':
