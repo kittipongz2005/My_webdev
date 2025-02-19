@@ -1,35 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History of Manchester</title>
-    <!-- ...existing code... -->
+    <title>ประวัติแมนเชสเตอร์ยูไนเต็ด</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #d60017;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #b80012;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcccb;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content img {
+            max-width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #d60017;
+            color: white;
+        }
+
+        footer a {
+            color: #ffcccb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>History of Manchester</h1>
-        <!-- ...existing code... -->
+        <h1>ประวัติแมนเชสเตอร์ยูไนเต็ด</h1>
     </header>
-    <main>
-        <section>
-            <h2>Early History</h2>
-            <p><!-- ...content about early history... --></p>
-        </section>
-        <section>
-            <h2>Industrial Revolution</h2>
-            <p><!-- ...content about industrial revolution... --></p>
-        </section>
-        <section>
-            <h2>Modern Era</h2>
-            <p><!-- ...content about modern era... --></p>
-        </section>
-    </main>
+
+    <nav>
+        <ul>
+            <li><a class="nav-link active" href="#" onclick="location.reload()">Frist</a></li>
+            <li><a href="change.html">Change</a></li>
+            <li><a href="present.html">Present</a></li>
+            <li><a href="more.html">more</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2 id="ช่วงแรก">ช่วงแรก (1878-1945)</h2>
+        <p>
+            แมนเชสเตอร์ยูไนเต็ดก่อตั้งขึ้นเมื่อ ค.ศ. 1878 ในชื่อสโมสรฟุตบอลนิวตันฮีตแอลวายอาร์ (อังกฤษ: Newton Heath LYR
+            Football Club) โดยพนักงานแผนกตู้โดยสารและตู้สินค้าของโรงซ่อมบำรุงรถไฟแลงคาเชียร์และยอร์กเชียร์ที่นิวตันฮีต
+        </p>
+        <p>
+            ในเดือนมกราคม ค.ศ. 1902 สโมสรติดหนี้เป็นจำนวน 2,670 ปอนด์ หรือเท่ากับ 290,000 ปอนด์ใน ค.ศ. 2020
+            จนมีคำสั่งให้เลิกกิจการ
+        </p>
+
+        <h2 id="การเปลี่ยนแปลง">การเปลี่ยนแปลงและความสำเร็จ</h2>
+        <p>
+            สโมสรเผชิญกับความยากลำบากในช่วงต้นศตวรรษที่ 20 ก่อนที่พวกเขาจะประสบความสำเร็จครั้งแรกในปี 1908
+            ด้วยการคว้าแชมป์ลีกเป็นครั้งแรก และยังชนะเอฟเอคัพในปีถัดมาในปี 1909
+        </p>
+
+        <h2 id="ยุคปัจจุบัน">ยุคปัจจุบัน</h2>
+        <p>
+            แมนเชสเตอร์ยูไนเต็ดกลายเป็นหนึ่งในสโมสรที่ประสบความสำเร็จมากที่สุดในประวัติศาสตร์ฟุตบอลอังกฤษและยุโรป
+            สโมสรคว้าแชมป์พรีเมียร์ลีก 13 สมัย ภายใต้การคุมทีมของเซอร์อเล็กซ์ เฟอร์กูสัน
+        </p>
+
+        <img src="https://upload.wikimedia.org/wikipedia/th/d/d7/Manchester_United_FC_League_Performance.png"
+            alt="กราฟแสดงผลงานของแมนเชสเตอร์ยูไนเต็ด">
+
+        <h2 id="ข้อมูลเพิ่มเติม">ข้อมูลเพิ่มเติม</h2>
+        <p>
+            แมนเชสเตอร์ยูไนเต็ดมีฐานแฟนบอลที่ใหญ่ที่สุดแห่งหนึ่งในโลกและยังเป็นหนึ่งในสโมสรที่มีมูลค่าสูงที่สุดในวงการกีฬาโลก
+            สนามเหย้าคือสนามโอลด์แทรฟฟอร์ด
+        </p>
+    </div>
+
     <footer>
-        <p>&copy; 2023 Manchester History</p>
-        <!-- ...existing code... -->
+        <p>ข้อมูลอ้างอิงจาก <a
+                href="https://th.wikipedia.org/wiki/%E0%B9%81%E0%B8%A1%E0%B8%99%E0%B9%80%E0%B8%8A%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C_%E0%B8%A2%E0%B8%B9%E0%B9%84%E0%B8%99%E0%B9%80%E0%B8%95%E0%B9%87%E0%B8%94"
+                target="_blank">Wikipedia</a></p>
     </footer>
 </body>
 
