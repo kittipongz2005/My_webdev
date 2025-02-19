@@ -97,6 +97,10 @@ def players():
 def nextmatch():
     return render_template('nextmatch.html', user=current_user)
 
+@app.route('/trophy')
+def trophy():
+    return render_template('trophy.html', user=current_user)
+
 
 if __name__ == '__main__':
     print("Starting Flask server...")

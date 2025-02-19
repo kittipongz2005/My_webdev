@@ -98,13 +98,13 @@ h2 {
 }
 
 .btn-danger {
-    background-color: #d9534f;
+    background-color: #DA291C;
     color: white;
     border: none;
 }
 
 .btn-danger:hover {
-    background-color: #c9302c;
+    background-color: #DA291C;
 }
 
 /* General Styles */
