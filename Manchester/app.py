@@ -85,6 +85,10 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
+@app.route('/history')
+def history():
+    return render_template('history.html', user=current_user)
+
 
 
 if __name__ == '__main__':
