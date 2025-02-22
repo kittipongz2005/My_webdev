@@ -5,62 +5,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manchester Players</title>
-    <!-- ...existing code... -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #DA291C, #000000);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #DA291C;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f9f9f9;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        li strong {
+            color: #DA291C;
+        }
+
+        footer {
+            background: #000000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h1>Manchester Players</h1>
-        <!-- ...existing code... -->
     </header>
     <main>
         <section>
-            <h2>Current Squad</h2>
+            <h2>Current Squad (2025)</h2>
             <ul>
                 <li><strong>Forwards:</strong></li>
                 <li>9 - Anthony Martial</li>
                 <li>10 - Marcus Rashford</li>
                 <li>11 - Mason Greenwood</li>
                 <li>25 - Jadon Sancho</li>
+                <li>7 - Alejandro Garnacho</li>
                 <li><strong>Midfielders:</strong></li>
-                <li>6 - Paul Pogba</li>
                 <li>8 - Bruno Fernandes</li>
-                <li>17 - Fred</li>
                 <li>18 - Scott McTominay</li>
-                <li>31 - Nemanja Matić</li>
-                <li>39 - Donny van de Beek</li>
+                <li>39 - Kobbie Mainoo</li>
+                <li>16 - Amad Diallo</li>
+                <li>14 - New Signing (CM)</li>
                 <li><strong>Defenders:</strong></li>
-                <li>2 - Victor Lindelöf</li>
-                <li>3 - Eric Bailly</li>
-                <li>4 - Phil Jones</li>
                 <li>5 - Harry Maguire</li>
                 <li>19 - Raphaël Varane</li>
+                <li>6 - Lisandro Martínez</li>
                 <li>20 - Diogo Dalot</li>
-                <li>23 - Luke Shaw</li>
                 <li>29 - Aaron Wan-Bissaka</li>
+                <li>23 - Luke Shaw</li>
+                <li>4 - New Signing (CB)</li>
                 <li><strong>Goalkeepers:</strong></li>
                 <li>1 - David de Gea</li>
                 <li>22 - Tom Heaton</li>
                 <li>26 - Dean Henderson</li>
             </ul>
         </section>
-        <section>
-            <h2>Legendary Players</h2>
-            <ul>
-                <li>7 - Cristiano Ronaldo</li>
-                <li>10 - Wayne Rooney</li>
-                <li>11 - Ryan Giggs</li>
-                <li>16 - Roy Keane</li>
-                <li>20 - Ole Gunnar Solskjær</li>
-                <li>21 - Eric Cantona</li>
-                <li>24 - Paul Scholes</li>
-                <li>25 - David Beckham</li>
-            </ul>
-        </section>
     </main>
     <footer>
-        <p>&copy; 2023 Manchester Players</p>
-        <!-- ...existing code... -->
+        <p>&copy; 2025 Manchester Players. All rights reserved.</p>
     </footer>
 </body>
 
