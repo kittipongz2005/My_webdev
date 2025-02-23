@@ -5,30 +5,229 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Match</title>
-    <!-- ...existing code... -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #DA291C, #000000);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #DA291C;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #DA291C;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #ffcccb;
+        }
+
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .match-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .match-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 45%;
+        }
+
+        .score {
+            font-size: 40px;
+            font-weight: bold;
+            width: 10%;
+        }
+
+        .team img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
+
+        .team-name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .next-match {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 15px;
+            background-color: #ffcccb;
+            color: #d60017;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
     <header>
+        <a href="\dashboard" class="back-btn" data-tooltip="Go back to dashboard">Back</a>
         <h1>Next Match</h1>
-        <!-- ...existing code... -->
     </header>
+
     <main>
-        <section>
-            <h2>Match Details</h2>
-            <p>Date: <!-- ...match date... --></p>
-            <p>Time: <!-- ...match time... --></p>
-            <p>Venue: <!-- ...match venue... --></p>
-            <p>Opponent: <!-- ...opponent team... --></p>
-        </section>
-        <section>
-            <h2>Tickets</h2>
-            <p><!-- ...ticket information... --></p>
+        <div class="match-container">
+            <div class="match-header">พรีเมียร์ลีก</div>
+            <div class="team-container">
+                <div class="team">
+                    <img src="https://upload.wikimedia.org/wikipedia/th/e/e4/Everton_F.C._2014.png" alt="Everton">
+                    <div class="team-name">เอฟเวอร์ตัน</div>
+                </div>
+                <div class="score">2</div>
+                <div class="score">2</div>
+                <div class="team">
+                    <img src="https://upload.wikimedia.org/wikipedia/th/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png"
+                        alt="Manchester United">
+                    <div class="team-name">แมนยู</div>
+                </div>
+            </div>
+            <div class="match-header">หมดเวลา</div>
+        </div>
+
+        <div class="match-container">
+            <div class="next-match">นัดถัดไป: แมนยู พบ อิปสวิช</div>
+            <div>วันอาทิตย์ที่ 27 กุมภาพันธ์ 2025</div>
+            <div>เวลา 02:30 น.</div>
+            <div>สนาม: โอลด์ แทรฟฟอร์ด</div>
+        </div>
+
+        <section class="league-table">
+            <h2>Premier League Standings</h2>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Team</th>
+                    <th>Played</th>
+                    <th>Won</th>
+                    <th>Drawn</th>
+                    <th>Lost</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Crystal Palace</td>
+                    <td>26</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>9</td>
+                    <td>33</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Everton</td>
+                    <td>26</td>
+                    <td>7</td>
+                    <td>10</td>
+                    <td>9</td>
+                    <td>31</td>
+                </tr>
+                <tr class="highlight">
+                    <td>15</td>
+                    <td>Manchester United</td>
+                    <td>26</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>12</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>West Ham</td>
+                    <td>26</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>12</td>
+                    <td>30</td>
+                </tr>
+            </table>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Manchester Next Match</p>
-        <!-- ...existing code... -->
+
+    <footer></footer>
+    <p>&copy; 2025 Manchester United. All rights reserved.</p>
     </footer>
 </body>
 
