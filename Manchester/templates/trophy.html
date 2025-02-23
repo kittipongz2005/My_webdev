@@ -7,102 +7,105 @@
     <title>Manchester United Trophies</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
-            color: #333;
+            color: #fff;
+            text-align: center;
         }
 
         header {
-            background: linear-gradient(135deg, #DA291C, #000000);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+            background: #DA291C;
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px;
+        }
+
+        .section:nth-child(odd) {
+            background: #000;
+        }
+
+        .section:nth-child(even) {
+            background: #fff;
+            color: #000;
+        }
+
+        .trophy-img {
+            width: 400px;
+        }
+
+        .content {
+            flex: 1;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        .sub-title {
             font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+        .years {
+            font-size: 1rem;
+            margin: 10px 0;
         }
 
-        section {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
+        .btn {
+            display: inline-block;
+            background-color: #DA291C;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
 
-        h2 {
-            color: #DA291C;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
+        .btn:hover {
+            background-color: darkred;
         }
 
         footer {
             background: #000;
             color: white;
-            text-align: center;
-            padding: 10px 0;
+            padding: 10px;
             margin-top: 20px;
-        }
-
-        .back-btn {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            padding: 10px 15px;
-            background-color: #ffcccb;
-            color: #d60017;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .back-btn:hover {
-            background-color: #ff9999;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <a href="\dashboard" class="back-btn">Back</a>
-        <h1>Manchester United Trophies</h1>
-    </header>
+    <header>Manchester United Trophies</header>
 
-    <main>
-        <section id="trophies">
-            <h2>Trophies</h2>
-            <ul>
-                <li>Premier League - 2021</li>
-                <li>FA Cup - 2019</li>
-                <li>Champions League - 2008</li>
-                <li>Europa League - 2017</li>
-                <li>FIFA Club World Cup - 2008</li>
-                <li>League Cup - 2017</li>
-                <li>Community Shield - 2016</li>
-                <!-- Add more trophies as needed -->
-            </ul>
-        </section>
-    </main>
+    <div class="section">
+        <img src="https://images2.minutemediacdn.com/image/upload/c_crop,w_4516,h_2540,x_0,y_0/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/images/GettyImages/mmsport/90min_th_international_web/01fn5w7jxg02wfz0wb51.jpg"
+            class="trophy-img" alt="League Trophies">
+        <div class="content">
+            <div class="title">20</div>
+            <div class="sub-title">LEAGUE TITLES</div>
+            <div class="years">1908, 1911, 1952, 1956, 1957, 1965, 1967, 1993, 1994, 1996, 1997, 1999, 2000, 2001, 2003,
+                2007, 2008, 2009, 2011, 2013</div>
 
-    <footer>
-        <p>&copy; 2025 Manchester United. All rights reserved.</p>
-    </footer>
+        </div>
+    </div>
+
+    <footer>&copy; 2025 Manchester United. All rights reserved.</footer>
 </body>
 
 </html>
