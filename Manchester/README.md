@@ -65,7 +65,13 @@ login.html และ register.html
 วิธีการรันโค้ด
 รันโดยใช้ คำสั่ง python -u "c:\Users\Asus\Desktop\Create Wep\Manchester\app.py"
 และกดลิ้งนี้ http://127.0.0.1:5000 ซึุ่งจะพาไปสู่หน้า Welcome to Manchester United ต่อมาเมื่อกดปุ่มไหนก็ตามจะพาไปสู่การ ล็อคอินก่อนเสมอ เช่น 
-กดHome History players Next match Trophy หรือกด Login ก็ตาม จะพาไปสู่หน้า Login เสมอ เมื่อล็อคอินเสร็จ กดปุ่ม home จะเป็นการ reset หน้าจอ home ต่อมา เมื่อกด History จะพาไปสู่หน้า History of Manchester United ซึ่งจะมี เพจอยู่อีกจำนวน 4 หน้า คือ Frist Change present และ more ซึ่งแต่ละหน้าจะมี ข้อมูลที่ต่างกันออกไปในข้างต้น ต่อไปกด Back จะกลับมาหน้า Dasebord.html และเมื่อกด Next Match จะนำไปสู่ หน้า nextmatch.html ที่จะมี ข้อมูลเกี่ยวกับ การแข่งขันนัดล่าสุด การแข่งขันที่จะถึง และลำดับตรางคะแนน ของทีม แล้วก็มีปุ่มกดกลับเช่นเดิม ต่อไปกดหน้า trophy จะไปสู่หน้า Manchester United Trophies ซึ่งในหน้านี้จะบอกเกี่ยวกับ แชมป์ทุกรายการของแมนยู และสุดท้ายปุ่ม logout จะเป็นปุ่มที่นำพา ให้กลับไปสู่หน้า  login อีกครั้ง
+กดHome History players Next match Trophy หรือกด Login ก็ตาม จะพาไปสู่หน้า Login เสมอ เมื่อล็อคอินเสร็จ กดปุ่ม home จะเป็นการ reset หน้าจอ home 
+ต่อมา เมื่อกด History จะพาไปสู่หน้า History of Manchester United ซึ่งจะมี เพจอยู่อีกจำนวน 4 หน้า คือ Frist Change present และ more 
+ซึ่งแต่ละหน้าจะมี ข้อมูลที่ต่างกันออกไปในข้างต้น ต่อไปกด Back จะกลับมาหน้า Dasebord.html และเมื่อกด Next Match จะนำไปสู่ หน้า nextmatch.html 
+ที่จะมี ข้อมูลเกี่ยวกับ การแข่งขันนัดล่าสุด การแข่งขันที่จะถึง และลำดับตรางคะแนน ของทีม แล้วก็มีปุ่มกดกลับเช่นเดิม ต่อไปกดหน้า trophy จะไปสู่หน้า 
+Manchester United Trophies ซึ่งในหน้านี้จะบอกเกี่ยวกับ แชมป์ทุกรายการของแมนยู และสุดท้ายปุ่ม logout จะเป็นปุ่มที่นำพา ให้กลับไปสู่หน้า  login
+อีกครั้ง
+
 
 
 
